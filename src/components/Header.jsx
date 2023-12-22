@@ -16,7 +16,7 @@ function Header() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto header-nav-items pointer">
-            <Nav.Item><h4>{`Welcome ${userData.Name}!!`}</h4></Nav.Item>
+            <Nav.Item><h4 className='welocme'>{`Welcome ${userData.Name}!!`}</h4></Nav.Item>
             <Nav.Item onClick={logout}><Button variant='danger'>Logout</Button></Nav.Item>
           </Nav>
         </Navbar.Collapse>

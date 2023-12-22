@@ -3,6 +3,7 @@ import AxiosService from '../utils/ApiService'
 import useLogout from '../hooks/useLogout'
 import { useEffect } from 'react'
 import { useState } from 'react'
+import { Form } from 'react-bootstrap'
 
 function DashboardUser() {
     let logout = useLogout()
@@ -29,35 +30,43 @@ useEffect(()=>{
     <div className='Userdash'>
       <div className='container-fluid'>
         <div className='dietchart'><h1 style={{textAlign:"center"}}>Follow below diet for your health!!</h1></div>
-      <table className=' tab'>
-      <thead>
-        <tr>
-          <th>Breakfast</th>
-          <th>Lunch</th>
-          <th>Evening Snack</th>
-          <th>Lunch</th>
-          <th>Water</th>
-          <th>Walking</th>
-          <th>Workout</th>
-        </tr>
-      </thead>
-      <tbody>
+        <div className='containeruser'>
         {
           diet.map((e,i)=>{
-            return <tr key={e._id}>
-              <td>{e.Breakfast}</td>
-              <td>{e.Lunch}</td>
-              <td>{e.EveningSnack}</td>
-              <td>{e.Dinner}</td>
-              <td>{e.Water}</td>
-              <td>{e.Walking}</td>
-              <td>{e.Workout}</td>
-            </tr>
+            return <Form key={e._id}>
+            <Form.Group className="mb-3">
+            <Form.Label className="hometxt">Breakfast</Form.Label> &nbsp; <i class="fa-solid fa-utensils"></i>
+            <Form.Control type="txt" placeholder="Enter email" value={e.Breakfast} disabled />
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form.Label className="hometxt">Lunch</Form.Label> &nbsp; <i class="fa-solid fa-utensils"></i>
+            <Form.Control type="txt" placeholder="Enter email" value={e.Lunch} disabled />
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form.Label className="hometxt">EveningSnack</Form.Label> &nbsp; <i class="fa-solid fa-mug-saucer"></i>
+            <Form.Control type="txt" placeholder="Enter email" value={e.EveningSnack} disabled />
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form.Label className="hometxt">Dinner</Form.Label> &nbsp; <i class="fa-solid fa-utensils"></i>
+            <Form.Control type="txt" placeholder="Enter email" value={e.Dinner} disabled />
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form.Label className="hometxt">Water</Form.Label>  &nbsp; <i class="fa-solid fa-bottle-water"></i>
+            <Form.Control type="txt" placeholder="Enter email" value={e.Water} disabled />
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form.Label className="hometxt">Walking</Form.Label> &nbsp; <i class="fa-solid fa-person-walking"></i>
+            <Form.Control type="txt" placeholder="Enter email" value={e.Walkin} disabled />
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form.Label className="hometxt">Workout</Form.Label> &nbsp; <i class="fa-solid fa-dumbbell"></i>
+            <Form.Control type="txt" placeholder="Enter email" value={e.Workout} disabled />
+          </Form.Group>
+        </Form>
           })
-        }
-      </tbody>
-        </table>
-        
+       
+    }
+    </div>
         </div>
         </div>
     </>

@@ -60,7 +60,15 @@ table{
 .App{
     font-weight: bold;
     font-size:30px !important;
+    color:rgb(182, 75, 111) !important;
 }
 .dietchart{
-    margin-top: 5%;
+    margin-top: 1%;
+}
+.welocme{
+    /* color:rgb(182, 75, 111); */
+}
+.containeruser{
+    width:40%;
+    margin-left: 30%;
 }
