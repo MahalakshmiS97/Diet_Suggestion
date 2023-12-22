@@ -75,7 +75,7 @@ function Home() {
       <br></br>
       <div className="pointer forgot" onClick={()=>navigate('/ForgetPassword')}>Forgot Password</div>
       <br></br>
-      <div className="pointer forgot" onClick={()=>navigate('/signup')}>New User? Signup</div>
+      <div className="pointer forgot" onClick={()=>navigate('/signup')}><i class="fa-solid fa-user-plus"></i>&nbsp;New User? Signup</div>
       </center>
     </Form>
 
